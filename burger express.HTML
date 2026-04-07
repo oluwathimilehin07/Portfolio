@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BURGER EXPRESS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+            background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            color: #fff;
+        }
+        .overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(30, 30, 30, 0.7);
+            z-index: 0;
+        }
+        .site-HEADER {
+            background: rgba(0,0,0,0.85);
+            padding: 0.5em 0;
+            position: relative;
+            z-index: 1;
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2em;
+        }
+        .brand-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2em;
+            color: #ffcb05;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+        .site-nav ul {
+            list-style: circle;
+            display: flex;
+            gap: 2em;
+            margin: 0;
+            padding: 0;
+        }
+        .site-nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1em;
+            transition: color 0.2s;
+        }
+        .site-nav a:hover {
+            color: #ffcb05;
+        }
+        .hero {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 6em 2em 3em 2em;
+        }
+        .hero-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3em;
+            color: #ffcb05;
+            margin-bottom: 0.3em;
+            text-shadow: 2px 2px 8px #222;
+        }
+        .hero-desc {
+            font-size: 1.3em;
+            margin-bottom: 2em;
+            color: #fff;
+            text-shadow: 1px 1px 6px #222;
+        }
+        .cta-btn {
+            background: linear-gradient(90deg, #ffcb05 0%, #ff5733 100%);
+            color: #222;
+            font-size: 1.2em;
+            font-weight: bold;
+            border: none;
+            border-radius: 30px;
+            padding: 0.8em 2.5em;
+            cursor: pointer;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+            transition: background 0.2s, color 0.2s;
+        }
+        .cta-btn:hover {
+            background: linear-gradient(90deg, #ff5733 0%, #ffcb05 100%);
+            color: #fff;
+        }t
+        .USP {
+            display: inline-flex;
+            justify-content: center;
+            gap: 2em;
+            margin: 3em auto 0 auto;
+            max-width: 1000px;
+            z-index: 1;
+            position: relative;
+        }
+        .USP-GRID {
+            display: flex;
+            gap: 2em;
+        }
+        .usp-card {
+            background: rgba(0,0,0,0.7);
+            border-radius: 18px;
+            padding: 2em 1.5em;
+            min-width: 220px;
+            text-align: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+        }
+        .usp-title {
+            font-size: 1.3em;
+            color: #ffcb05;
+            margin-bottom: 0.5em;
+            font-weight: 700;
+        }
+        .usp-desc {
+            font-size: 1em;
+            color: #fff;
+        }
+        @media (max-width: 700px) {
+            .USP-GRID {
+                flex-direction: column;
+                gap: 1em;
+            }
+            .USP {
+                flex-direction: column;
+                gap: 1em;
+            }
+            .header-inner {
+                flex-direction: column;
+                gap: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <header class="site-HEADER">
+        <div class="header-inner">
+            <span class="brand-text">BURGER EXPRESS</span>
+            <nav class="site-nav">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">MENU</a></li>
+                    <li><a href="#">ORDERS</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+        <h1 class="hero-title">Welcome to Burger Express!</h1>
+        <p class="hero-desc">Delicious, juicy burgers delivered fast and fresh. Taste the difference!</p>
+        <a href="#menu"><button class="cta-btn">Order Now</button></a>
+    </section>
+    <section class="USP">
+        <div class="USP-GRID">
+            <div class="usp-card">
+                <div class="usp-title">Fresh Ingredients</div>
+                <div class="usp-desc">We use only the freshest, locally sourced ingredients for every burger.</div>
+            </div>
+            <div class="usp-card">
+                <div class="usp-title">Fast Delivery</div>
+                <div class="usp-desc">Get your burger delivered hot and fast, right to your door.</div>
+            </div>
+            <div class="usp-card">
+                <div class="usp-title">Unique Recipes</div>
+                <div class="usp-desc">Try our signature burgers and discover new favorites every month!</div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

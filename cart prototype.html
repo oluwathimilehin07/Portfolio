@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart quantity</title>
+</head>
+<body>
+
+    <h4>Cart Quantity</h4>
+    <button 
+    
+    onclick="console.log('Cart quantity :' + Cartquantity)"
+    
+    >
+       Show Quantity 
+    </button>
+
+   
+    <button 
+    
+    onclick="Cartquantity = Cartquantity + 1; console.log('Cart Quantity :' + Cartquantity)">
+
+        Add to cart
+    </button>
+
+  
+  
+    <button 
+onclick="Cartquantity = Cartquantity + 2; console.log('Cart Quantity: ' + Cartquantity)">
+    +2
+</button>
+
+
+
+<button onclick="Cartquantity = 0; console.log('Reset Cart');  console.log( 'Cart Quantity:' + Cartquantity)">
+    Reset Cart
+</button>
+
+
+<button onclick="
+Cartquantity = Cartquantity +=4
+console.log(Cartquantity)">
++4</button>
+
+
+<button onclick="Cartquantity = Cartquantity + 5; console.log('Cart Quantity: ' + Cartquantity)">
+
++5</button>
+
+
+<button onclick="Cartquantity = Cartquantity += -1; console.log ('Cart Quantity :' + Cartquantity)" >
+ Remove from cart
+</button>
+
+
+
+<button onclick="Cartquantity = Cartquantity += -2 ; console.log('Cart Quantity :' + Cartquantity)">
+
+-2 </button>
+
+
+
+<button onclick="Cartquantity = Cartquantity += -3 ; console.log('Cart Quantity :' + Cartquantity)">
+    
+
+-3 </button>
+
+
+
+    <script>
+let Cartquantity = 0;
+let name = 'Timilehin Alonge';
+
+console.log('My name is ' + name);
+
+
+let Coffee = 5;
+let Bagels = 3 * 2;
+let Soup = 9;
+
+let Cost = Coffee + Bagels + Soup;
+
+console.log(`COST OF FOOD: $${Cost}`);
+
+let Tax = Cost * 0.1 ;
+
+console.log(`TAX : $${Tax}`);
+
+let TotalCost = Cost + Tax;
+
+console.log(`TOTAL COST: $${TotalCost}`);
+    </script> 
+</body> 
+</html>

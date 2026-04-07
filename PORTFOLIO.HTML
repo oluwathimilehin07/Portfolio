@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<title>Timilehin</title>
+  <script>
+    // Dark mode toggle functionality
+    function toggleTheme() {
+      document.body.classList.toggle('dark-mode');
+      const toggle = document.getElementById('theme-toggle');
+      if (document.body.classList.contains('dark-mode')) {
+        toggle.textContent = '☀️ Light Mode';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        toggle.textContent = '🌙 Dark Mode';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    // Load saved theme on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+        document.getElementById('theme-toggle').textContent = '☀️ Light Mode';
+      }
+    });
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      background: #f8fafc;
+      color: #22223b;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    
+    body.dark-mode {
+      background: #1a1a1a;
+      color: #e0e0e0;
+    }
+    header {
+      background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      padding: 48px 0 32px 0;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(102,126,234,0.3);
+      position: relative;
+      transition: background 0.3s ease;
+    }
+    
+    body.dark-mode header {
+      background: linear-gradient(90deg, #ff6b6b 0%, #ffa500 100%);
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 40px 32px;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(34,34,59,0.08);
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    body.dark-mode .container {
+      background: #2d2d2d;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+    }
+    h1 {
+      color: #fefae0;
+      font-size: 2.5rem;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+    
+    body.dark-mode h1 {
+      color: #ffd700;
+    }
+    h2 {
+      color: #667eea;
+      border-left: 4px solid #764ba2;
+      padding-left: 12px;
+      margin-bottom: 18px;
+      font-size: 1.5rem;
+      transition: color 0.3s ease, border-left-color 0.3s ease;
+    }
+    
+    body.dark-mode h2 {
+      color: #ffa500;
+      border-left-color: #ff6b6b;
+    }
+    .profile-img {
+      width: 120px;
+      border-radius: 50%;
+      margin-bottom: 18px;
+      border: 4px solid #a3b18a;
+      box-shadow: 0 2px 8px rgba(58,90,64,0.10);
+    }
+    .section {
+      margin-bottom: 48px;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .project {
+      background: #f8f9fa;
+      padding: 24px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s, box-shadow 0.2s, background 0.3s ease;
+    }
+    
+    body.dark-mode .project {
+      background: #3a3a3a;
+      box-shadow: 0 2px 8px rgba(255,255,255,0.1);
+    }
+    .project:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 6px 24px rgba(88,129,87,0.12);
+    }
+    .project h3 {
+      margin-top: 0;
+      color: #667eea;
+      transition: color 0.3s ease;
+    }
+    
+    body.dark-mode .project h3 {
+      color: #ffa500;
+    }
+    footer {
+      text-align: center;
+      padding: 24px 0;
+      background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+      color: #fefae0;
+      margin-top: 48px;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      transition: background 0.3s ease;
+    }
+    
+    body.dark-mode footer {
+      background: linear-gradient(90deg, #ff6b6b 0%, #ffa500 100%);
+    }
+    a {
+      color: #667eea;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    a:hover {
+      color: #764ba2;
+      text-decoration: underline;
+    }
+    
+    body.dark-mode a {
+      color: #ffa500;
+    }
+    body.dark-mode a:hover {
+      color: #ff6b6b;
+    }
+    @media (max-width: 700px) {
+      .container { padding: 20px 8px; }
+      .projects { flex-direction: column; }
+    }
+    
+  </style>
+</head>
+<body>
+  <header>
+    <img style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; margin-bottom: 18px; border: 4px solid #a3b18a;" src="WhatsApp Image 2025-09-16 at 12.00.19.jpeg" alt="">
+    <h1>OLUWATIMILEHIN</h1>
+    <p style="color:#d8f3dc; font-size:1.1rem;">Web Developer | Designer | Programmer</p>
+    <button id="theme-toggle" onclick="toggleTheme()" style="position: absolute; top: 20px; right: 20px; background: rgba(255,255,255,0.2); border: 1px solid #a3b18a; color: white; padding: 8px 16px; border-radius: 20px; cursor: pointer; font-size: 14px; transition: all 0.3s;">🌙 Dark Mode</button>
+  </header>
+  <div class="container">
+    <section class="section">
+      <h2>About Me</h2>
+      <p>
+        Welcome to my portfolio! I am a passionate web developer with experience in HTML, CSS, and JavaScript. I love building beautiful, functional, and interactive websites.
+      </p>
+      
+      <h2>Skills</h2>
+      <p>Expert in <strong>HTML5</strong>, <strong>CSS3</strong>, and <strong>JavaScript</strong>. Proficient in creating responsive websites, DOM manipulation, interactive prototypes, and modern UI/UX designs that deliver exceptional user experiences.</p>
+      <ul style="padding-left: 20px;">
+        <li>Responsive Web Design </li>
+        <li>JavaScript Fundamentals (Variables, Functions, Events, Logic)</li>
+        <li>CSS Animations, Flexbox/Grid, Gradients</li>
+        <li>Real-time Apps (Calculators, Games, Timers)</li>
+      </ul>
+
+      <h2>Education</h2>
+      <p><strong>University of Ilorin</strong> – Pursuing/Completed studies with focus on Computer Science and Web Development.</p>
+    </section>
+    <section class="section">
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="project">
+          <h3>The Sanctuary</h3>
+          <p>Modern responsive wellness website with hero section, services, and contact form. Features soothing gradients, navigation, and mobile-first design demonstrating advanced HTML/CSS skills. <a href="THE SANCTUARY.html">View Project</a></p>
+        </div>
+        <div class="project">
+          <h3>Burger Express</h3>
+          <p>Dynamic restaurant landing page with parallax background, custom typography, USP cards, and CTA buttons. Showcases CSS gradients, flexbox, and responsive layouts for food delivery service. <a href="burger express.HTML">View Project</a></p>
+        </div>
+        <div class="project">
+          <h3>Rock Paper Scissors</h3>
+          <p>Interactive game prototype using JavaScript conditionals and alerts. Includes buttons for choices and link to advanced random logic version. <a href="Rock paper scissors.html">View Project</a></p>
+        </div>
+        <div class="project">
+          <h3>Calculator Prototype</h3>
+          <p>Fully functional calculator with number/operator buttons and eval() for real-time calculations. Demonstrates JS event handling and dynamic computation. <a href="Calculator protoype.html">View Project</a></p>
+        </div>
+        <div class="project">
+          <h3>Cart Prototype</h3>
+          <p>Shopping cart demo with add/remove quantity controls (+1, +2, -1, reset). JavaScript variable manipulation and console logging for e-commerce functionality. <a href="cart prototype.html">View Project</a></p>
+        </div>
+        <div class="project">
+          <h3>Live Timer Clock</h3>
+          <p>Real-time digital clock using JavaScript Date API and setInterval for seconds/minutes/hours display. Clean, centered UI with responsive styling. <a href="timer.html">View Project</a></p>
+        </div>
+        <div class="project">
+          <h3>Amazon Purchase Buttons</h3>
+          <p>E-commerce button prototype for "Add to Cart" and "Buy Now" with alert feedback. Simple product listing with custom styling. <a href="buttons and popup.html">View Project</a></p>
+        </div>
+        <div class="project">
+          <h3>Image Transformer</h3>
+          <p>JavaScript DOM manipulation demo changing image src on button clicks (green/black/yellow avifs). Event-driven image swapping functionality. <a href="image transformation.html">View Project</a></p>
+        </div>
+        <div class="project">
+          <h3>JavaScript Variables</h3>
+          <p>Basic JS concepts demo: variables, arithmetic operations, string concatenation, re-assignment. Console-based examples for foundational learning. <a href="Variables.html">View Project</a></p>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:timialonge07@gmail.com">timialonge07@gmail.com</a></p>
+      <p>Phone: <a href="tel:+2348143179174">+2348143179174</a></p>
+    </section>
+  </div>
+  <footer>
+    &copy; 2025 Oluwatimilehin. All rights reserved.
